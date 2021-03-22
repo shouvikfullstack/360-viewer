@@ -1,0 +1,208 @@
+/*
+  Minimum viable styles for Viewer
+*/
+
+.viewer-viewer {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	outline: none;
+}
+
+.viewer-draggable-true {
+	cursor: grab;
+}
+
+.viewer-recording-true {
+	cursor: cell !important;
+}
+
+.viewer-viewer-image {
+	width: 100%;
+	margin: auto;
+}
+.viewer-viewer-image-shown {
+	display: block;
+}
+.viewer-viewer-image-hidden {
+	display: none;
+}
+
+/* Hint */
+
+.viewer-hint-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(237, 237, 237, 0.3);
+	z-index: 100;
+	cursor: pointer;
+}
+
+.drag-guide {
+	display: flex;
+	background: #fbfbfb;
+	padding: 10px;
+	border-radius: 30px;
+	align-items: center;
+	margin: 14px 31px;
+}
+
+.drag-image {
+	height: auto;
+	width: 75px;
+}
+
+.viewer-hint {
+	width: 80px;
+	height: 80px;
+	background: #333;
+	opacity: 1;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	-webkit-transition: box-shadow 0.1s; /* Safari */
+	transition: box-shadow 0.1s;
+}
+
+.viewer-hint:before,
+.viewer-hint:after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.viewer-hint:before {
+	border-width: 15px 15px 15px 0;
+	border-color: transparent #fff transparent transparent;
+	left: 9px;
+}
+
+.viewer-hint:after {
+	border-width: 15px 0 15px 15px;
+	border-color: transparent transparent transparent #fff;
+	right: 9px;
+}
+
+.viewer-hint-text {
+	display: block;
+	font-size: 34px;
+	height: 34px;
+	font-weight: bold;
+	width: 80%;
+	text-align: center;
+	position: absolute;
+	top: -16px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.viewer-hint-overlay:hover .viewer-hint,
+.viewer-hint-overlay:focus .viewer-hint {
+	box-shadow: 0 0 16px 1px #333;
+}
+
+.viewer-full-screen {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/* Loading state */
+
+.viewer-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 101;
+}
+
+/* Animations */
+
+@-webkit-keyframes load8 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes load8 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
