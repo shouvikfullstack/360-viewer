@@ -53,7 +53,7 @@ const Home = () => {
             </LogoWrapper>
            
             <SpinViewWrapper className="image-viewer">
-                <Viewer pinss={pins} inverse={true} autoplaySpeed={250} location={imagePath} format="jpg" count={numberOfImages} showControlBar />
+                <Viewer pinss={pins} inverse={true} autoplaySpeed={250} location={imagePath} format="png" count={numberOfImages} showControlBar />
             </SpinViewWrapper>
         </Wrapper>
     )
